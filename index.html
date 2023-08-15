@@ -9,6 +9,8 @@
     <link rel="icon" href="images/bookshelf.svg" type="image/svg"/>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Library</title>
+
+    <script src="javascript.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,7 +24,7 @@
         </section>
     </header>
     <main>
-        <table>
+        <table id="table">
             <thead>
                 <tr>
                     <th>cover</th>
@@ -33,27 +35,10 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr class="book-info">
-                    <td><img src="https://m.media-amazon.com/images/I/71HbYElfY0L._AC_UF1000,1000_QL80_.jpg" width="70px" height="100px"></td>
-                    <td>Harry Potter and the Sorcerer's Stone</td>
-                    <td>J.K. Rowling</td>
-                    <td>309</td>
-                    <td>read</td>
-                    <td><button>CANCEL</button></td>
-                </tr>
-                <tr class="book-info">
-                    <td><img src="https://m.media-amazon.com/images/I/61Nv1wDO91L._SX281_BO1,204,203,200_.jpg" width="70px" height="100px"></td>
-                    <td>Breaking Creed</td>
-                    <td>Alex Kava</td>
-                    <td>368</td>
-                    <td>not read</td>
-                    <td><button>CANCEL</button></td>
-                </tr>
+            <tbody id="table-body">
             </tbody>
         </table>
     </main>
     <footer>Design by Agata Deter &copy; Copyright 2023</footer>
-    <script src="javascript.js"></script>
 </body>
 </html>
