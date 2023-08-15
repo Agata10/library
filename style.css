@@ -11,21 +11,26 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--font-family);
+}
+
 header {
     background-color: var(--section-color);
     color: var(--text-color);
     line-height: 3rem;
     font-size: 3rem;
-    font-family: var(--font-family);
     letter-spacing: 3px;
     padding-bottom: 20px;
     padding-top: 20px;
+    padding-left: 20px;
 
     display: flex;
     justify-content: space-around;
-    gap: 40vw;
     align-items: center;
     height: 20vh;
+    gap: 40vw;
+    flex: 1;
 }
 
 header img {
@@ -49,16 +54,46 @@ header button {
     padding: 15px;
     font-size: 1rem;
     font-weight: 600;
+    font-family: var(--font-family);    
 }
 
 main {
     height: 75vh;
+    width: 100%;
 }
+
+main table {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    font-size: 0.8rem;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+tr {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    gap: 20px;
+
+    border-bottom: 1px solid var(--section-color);
+}
+
+th, td {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 8px 0;
+    font-size: 1rem;
+}
+
 
 footer {
     font-size: 1rem;
     color: var(--text-color);
-    font-family: var(--font-family);
     height: 5vh;
 
     display: flex;
@@ -66,3 +101,52 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    header {
+     font-size: 1.6rem;
+     line-height: 1rem;
+     gap: 0px;
+     padding-left: 20px;
+    }
+
+    header img {
+        height: 2.5rem;
+    }
+
+    header button {
+        color: var(--text-color);
+        border: none;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.6);
+        padding: 10px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        font-family: var(--font-family);  
+    }
+
+    footer{
+        font-size: 0.8rem;
+    }
+
+
+    main table {
+        width: 100%;
+        padding: 10px;
+    }
+
+    tr {
+        gap: 2vw;
+    }
+    
+    th, td {
+        padding: 8px 0;
+        font-size: 0.8rem;
+    }
+    
+    td > img {
+        width: 3.5rem;
+        height: 5rem;
+    }
+  }

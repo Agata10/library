@@ -13,15 +13,46 @@
 <body>
     <header>
         <section>
-        <img src="images/book-half.svg" alt="Logo">
-        <div class="library-name">library</div>
-    </section>
+            <img src="images/book-half.svg" alt="Logo">
+            <div class="library-name">library</div>
+        </section>
         <section>
-        <button type="button" class="add-button">Add Book</button>
-        <button type="button" class="login-button">Log In</button>
+            <button type="button" class="add-button">Add Book</button>
+            <button type="button" class="login-button">Log In</button>
         </section>
     </header>
-    <main></main>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>cover</th>
+                    <th>title</th>
+                    <th>author</th>
+                    <th>pages</th>
+                    <th>read</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="book-info">
+                    <td><img src="https://m.media-amazon.com/images/I/71HbYElfY0L._AC_UF1000,1000_QL80_.jpg" width="70px" height="100px"></td>
+                    <td>Harry Potter and the Sorcerer's Stone</td>
+                    <td>J.K. Rowling</td>
+                    <td>309</td>
+                    <td>read</td>
+                    <td><button>CANCEL</button></td>
+                </tr>
+                <tr class="book-info">
+                    <td><img src="https://m.media-amazon.com/images/I/61Nv1wDO91L._SX281_BO1,204,203,200_.jpg" width="70px" height="100px"></td>
+                    <td>Breaking Creed</td>
+                    <td>Alex Kava</td>
+                    <td>368</td>
+                    <td>not read</td>
+                    <td><button>CANCEL</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
     <footer>Design by Agata Deter &copy; Copyright 2023</footer>
     <script src="javascript.js"></script>
 </body>
