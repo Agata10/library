@@ -1,3 +1,68 @@
-h1 {
-    color: red;
+:root {
+    --main-color: #854d0e;
+    --text-color: #714410;
+    --section-color: #e4cbae;
+    --font-family: "Manrope", "Arial", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--section-color);
+    color: var(--text-color);
+    line-height: 3rem;
+    font-size: 3rem;
+    font-family: var(--font-family);
+    letter-spacing: 3px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    gap: 40vw;
+    align-items: center;
+    height: 20vh;
+}
+
+header img {
+    width: 4rem;
+    height: 4rem;
+}
+
+header > section:first-child {
+    width: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header button {
+    color: var(--text-color);
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.6);
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+main {
+    height: 75vh;
+}
+
+footer {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    height: 5vh;
+
+    display: flex;
+    margin-top: auto;
+    align-items: center;
+    justify-content: center;
 }
