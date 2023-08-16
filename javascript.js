@@ -84,6 +84,30 @@ function addBookToLibrary(book) {
         img.style.width = "70px";
         img.style.height = "100px";
         cell.appendChild(img);
+      } else if(key === "read") {
+        let readStatusbutton = document.createElement('button');
+        readStatusbutton.innerText = book[key];
+        readStatusbutton.style.padding = "8px 16px";
+        readStatusbutton.style.borderRadius = "8px";
+        readStatusbutton.style.border = "none";
+        readStatusbutton.style.backgroundColor = "#e4cbae";
+        readStatusbutton.style.color = "#714410";
+        readStatusbutton.style.fontFamily = `"Manrope", "Arial", sans-serif`;
+        readStatusbutton.style.fontWeight = "600";
+        readStatusbutton.style.fontSize = "0.8rem";
+        readStatusbutton.style.cursor = "pointer";
+        cell.appendChild(readStatusbutton);
+
+        readStatusbutton.addEventListener('click', () => {
+          // When there is a "click"
+          // it shows an alert in the browser
+          if(readStatusbutton == "read") {
+            readStatusbutton.innerText = "not read";
+          } else {
+            readStatusbutton.innerText = "read";
+          }
+        });
+    
       } else {
         cell.innerText = book[key];
       }
