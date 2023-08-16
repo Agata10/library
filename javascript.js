@@ -51,8 +51,14 @@ function addUserBook() {
     if(urlImg.value === ""){
       urlImg.value = "./images/book-half.svg";
     }
+    
+    if(!bookReadStatus.checked) {
+      bookReadStatus.value = "not read"
+    } else {
+      bookReadStatus.value = "read"
+    }
 
-    const newBook = new Book(urlImg.value, bookTitle.value, bookAuthor.value, bookPages.value, bookReadStatus.checked);
+    const newBook = new Book(urlImg.value, bookTitle.value, bookAuthor.value, bookPages.value, bookReadStatus.value);
     addBookToLibrary(newBook);
     console.log(newBook);
     favDialog.close();
