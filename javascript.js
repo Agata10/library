@@ -23,7 +23,6 @@ function createCancelBtn() {
 function addUserBook() {
   const addBookBtn = document.getElementById("add-button");
   const favDialog = document.getElementById("favDialog");
-  const outputBox = document.querySelector("output");
   const submitForm = favDialog.querySelector("#my-form");
   const submitBookBtn = favDialog.querySelector("#submitBtn");
   let urlImg = favDialog.querySelector("#url");
@@ -31,6 +30,7 @@ function addUserBook() {
   const bookAuthor = favDialog.querySelector("#author");
   const bookPages = document.getElementById("pages");
   const bookReadStatus = document.getElementById("read-check");
+  const errorMsg = document.querySelector(".error-msg");
  
   
   // "Show the dialog" button opens the <dialog> modally
@@ -45,7 +45,7 @@ function addUserBook() {
   } 
 });
 
-  submitBookBtn.addEventListener("click", (event) => {
+submitForm.addEventListener("submit", (event) => {
     event.preventDefault(); // We don't want to submit this fake form
       
     if(urlImg.value === ""){
@@ -98,7 +98,8 @@ function addBookToLibrary(book) {
     row.appendChild(lastCell);
 
     cancelBtn.addEventListener("click", function() {
-      tableBody.deleteRow(this.getElementsByTagName("tr"));
+      var row = cancelBtn.parentNode.parentNode; 
+      row.parentNode.removeChild(row); 
     });
 
   }
