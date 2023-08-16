@@ -19,7 +19,7 @@
             <div class="library-name">library</div>
         </section>
         <section>
-            <button type="button" class="add-button">Add Book</button>
+            <button id="add-button">Add Book</button>
             <button type="button" class="login-button">Log In</button>
         </section>
     </header>
@@ -39,6 +39,32 @@
             </tbody>
         </table>
     </main>
+    <dialog id="favDialog">
+        <form id="my-form" method="dialog">
+            <h1>Add New Book</h1>
+            <div>
+                <input type="url" name="url" id="url" placeholder="Image URL" pattern="https://.*" size="200">
+            </div>
+            <div>
+                <input type="text" name="title" id="title" placeholder="Title" maxlength="50" required>
+            </div>
+            <div>
+                <input type="text" name="author" id="author" placeholder="Author" maxlength="50" required>
+            </div>
+            <div>
+                <input type="number" id="pages" min="10" max="800" placeholder="Pages" required>
+            </div>
+            <div class="read">
+                <label for="read" id="read">Have you already read it?
+                    <input type="checkbox" id="read-check">
+                </label>
+            </div>
+          <div>
+            <button id="submitBtn">Submit</button>
+          </div>
+        </form>
+      </dialog>
+      <output></output>
     <footer>Design by Agata Deter &copy; Copyright 2023</footer>
 </body>
 </html>

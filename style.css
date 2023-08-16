@@ -15,6 +15,7 @@ body {
     font-family: var(--font-family);
 }
 
+/* header */
 header {
     background-color: var(--section-color);
     color: var(--text-color);
@@ -57,6 +58,7 @@ header button {
     font-family: var(--font-family);    
 }
 
+/* MAIN */
 main {
     height: 75vh;
     width: 100%;
@@ -99,6 +101,7 @@ th {
 }
 
 
+/* FOOTER */
 footer {
     font-size: 1rem;
     color: var(--text-color);
@@ -110,6 +113,107 @@ footer {
     justify-content: center;
 }
 
+/* DIALOG */
+
+dialog {
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    width: 300px;
+    border: none;
+    border-radius: calc(5px * var(--ratio));
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    padding: 1.6rem;
+    max-width: 400px;
+    background-color: #72522e;
+    border-radius: 12px;
+  }
+
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #author,
+  #title,
+  #url,
+  #pages {
+    width: 100%;
+    padding: 12px;
+  }
+
+  #read {
+    color: var(--section-color);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    line-height: 1.2;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    color: var(--section-color);
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 0.10rem solid var(--section-color);
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--text-color);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+  form > div {
+    width: 100%;
+  }
+
+  #submitBtn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    border-radius: 8px;
+    border: none;
+    background-color: var(--section-color);
+  }
+
+  input {
+    border-radius: 8px;
+    border: none;
+    background-color: whitesmoke;
+  }
+
+  input::placeholder {
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+
+  h1 {
+    font-weight: 500;
+    color: var(--section-color);
+    font-size: 1.7rem;
+  }
+
+
+/* PHONE SCREEN */
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     header {
@@ -157,4 +261,9 @@ footer {
         width: 3.5rem;
         height: 5rem;
     }
+
+    dialog {
+       left: 15vw;
+    }
+
   }
