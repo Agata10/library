@@ -12,7 +12,7 @@
 
 
 ## General information
-Project is one of the task from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library). It is a continuation of learning JavaScript. The main goal is to pracise cresting objects.
+Project is one of the task from [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-library). It is a continuation of learning JavaScript. The main goal is to pracise creating objects.
 
 ## Technologies
 * CSS3
@@ -20,8 +20,8 @@ Project is one of the task from [The Odin Project](https://www.theodinproject.co
 * JavaScript
 
 ## Screenshots
-![Wepage]
-![Wepage2]
+![Wepage](./images/laptop.png)
+![Wepage2](./images/phone.png)
 
 ## Link to game
 
@@ -35,4 +35,6 @@ or
 
 ## Usage
 
+The library is simple. It shows books in table. User can press "ADD BOOK" and the small widndow pops out to add book. User can change "READ" status by clicking the button. If user doesn't add img url for cover, there will be automatically added logo of the library instead of cover.
 
+The project let me focus on objects in JS and array of objects as also, working with DOM.
