@@ -37,3 +37,5 @@ I tried to play with responsive design for phone.
 The library is simple. It shows books in table. User can press "ADD BOOK" and the small widndow pops out to add book. User can change "READ" status by clicking the button. If user doesn't add img url for cover, there will be automatically added logo of the library instead of cover.
 
 The project let me focus on objects in JS and array of objects as also, working with DOM.
+
+After a while instead of object creation a change it to class.
