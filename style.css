@@ -101,6 +101,24 @@ th {
     color: var(--text-color);
 }
 
+.readBtn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #e4cbae;
+  color:  #714410;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer; 
+}
+
+.cancelBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 
 /* FOOTER */
 footer {

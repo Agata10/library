@@ -1,38 +1,12 @@
 
-function Book(img, title, author, pages, read) {
+class Book {
+  constructor(img, title, author, pages, read) {
   this.img = img;
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.read = read;
-}
-
-function createCancelBtn() {
-  let cancelBtn = document.createElement("button");
-  let cancelImg = document.createElement("img");
-  cancelImg.setAttribute("src","./images/close.svg");
-  cancelBtn.style.background = "transparent";
-  cancelBtn.style.border = "none";
-  cancelBtn.style.cursor = "pointer";
-  cancelBtn.appendChild(cancelImg);
-
-  return cancelBtn;
-
-}
-
-function createReadBtnStatus() {
-  let readStatusbutton = document.createElement('button');
-  readStatusbutton.style.padding = "8px 16px";
-  readStatusbutton.style.borderRadius = "8px";
-  readStatusbutton.style.border = "none";
-  readStatusbutton.style.backgroundColor = "#e4cbae";
-  readStatusbutton.style.color = "#714410";
-  readStatusbutton.style.fontFamily = `"Manrope", "Arial", sans-serif`;
-  readStatusbutton.style.fontWeight = "600";
-  readStatusbutton.style.fontSize = "0.8rem";
-  readStatusbutton.style.cursor = "pointer";
-  
-  return readStatusbutton;
+  }
 }
 
 function addBookToLibrary(book) {
@@ -43,7 +17,6 @@ function addBookToLibrary(book) {
   let tableBody = table.getElementsByTagName("tbody")[0];
   const row = document.createElement("tr");
   
-
   for (let book of Object.values(myLibrary)) {
     
     for (let key in book) {
@@ -59,7 +32,8 @@ function addBookToLibrary(book) {
 
       } else if (key === "read") {
 
-        let readBtn = createReadBtnStatus();
+        let readBtn = document.createElement('button');
+        readBtn.classList.add("readBtn");
         readBtn.innerText = book[key];
         cell.appendChild(readBtn);
 
@@ -78,8 +52,13 @@ function addBookToLibrary(book) {
       tableBody.appendChild(row);
     }
 
+    //create cancel btn on the new cell
     let lastCell = document.createElement("td");
-    let cancelBtn = createCancelBtn();
+    let cancelBtn = document.createElement("button");
+    let cancelImg = document.createElement("img");
+    cancelBtn.classList.add("cancelBtn");
+    cancelImg.setAttribute("src","./images/close.svg");
+    cancelBtn.appendChild(cancelImg);
     lastCell.appendChild(cancelBtn);
     row.appendChild(lastCell);
 
@@ -132,7 +111,6 @@ submitForm.addEventListener("submit", (event) => {
     favDialog.close();
   });
 }
-
 
 
 const book1 = new Book("https://m.media-amazon.com/images/I/71HbYElfY0L._AC_UF1000,1000_QL80_.jpg", "Harry Potter and the Sorcerer's Stone", "J.K. Rowling", 309, "read");
